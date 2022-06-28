@@ -1,0 +1,141 @@
+---
+title: "Citando con Zotero"
+author: 
+  - "Alejandro Manuel Ferreiro"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: [default, xaringan-themer.css, custom.css, useR-fonts]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view","editable","scribble","animate_css","panelset","tachyons"))
+```
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#d95f0e",
+  white_color = "#ffffd4",
+  black_color = "#253494",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+class: middle,center
+
+
+#  Citando con Zotero ![](/img/zotero_logo.png)
+```{r echo=FALSE, out.width="50%", fig.align="center"}
+knitr::include_graphics("https://media.giphy.com/media/26gsvcgO9EaGWFXqM/giphy.gif")
+```
+
+#### Alejandro Manuel Ferreiro
+
+---
+class: inverse center, middle
+
+# ¿Por qué usar una aplicación para manipular bibliografía?
+
+---
+class: top, left
+
+### ¿Por qué usar una aplicación para manipular bibliografía?
+
+- Insertar citas-en-texto en diversos procesadores de texto.
+
+- Insertar bibliografía a partir de estas citas.
+
+- Tener todos los artículos de lectura organizados.
+
+- Editar estos artículos, con comentarios o resaltados.
+
+---
+class: inverse center, middle
+
+# ¿Por qué Zotero?
+
+---
+class: top, left
+
+### ¿Por qué Zotero?
+
+- Existe una importante oferta de software para el manejo de Referencias.
+
+- Los más usados son: **Mendeley**, **EndNote** y **Zotero**.
+
+- Mendeley tal vez el más difundido, pero últimos cambios no fueron buenos.
+
+- **Mendeley:** Cambio el Mendeley Desktop por Mendeley Reference Manager.
+ + Aplicación de escritorio inestable.
+ + No chequea duplicados.
+ + Plug-in de word tiene muchos bugs.
+ + Solo funciona con Word
+
+- **EndNote:** Es pago.
+
+- **Zotero:** Alternativa gratuita y de software libre.
+ + Muchas personas lo mantienen.
+ + Con muchas aplicaciones que mejoran su uso.
+
+---
+class: inverse top, left
+
+### Contenidos de la charla
+
+1. Descarga de Zotero y Zotero conector
+
+2. Formas de organizar bibliografía usando Zotero
+
+3. 
+
+---
+class: top, left
+
+### Descarga de [Zotero](https://www.zotero.org/download/client/dl?channel=release&platform=win32&version=6.0.9) y [Zotero Conector](https://chrome.google.com/webstore/detail/ekhagklcjbdpajgpjgmbionohlpdbjgc)
+![](/img/ZoteroDesktop.png)
+
+* Para pagar la generación de snapshots automaticos:
+
+Click Izq sobre el Zotero conector `r fontawesome::fa("arrow-right", fill = "black")` Opciones `r fontawesome::fa("arrow-right", fill = "black")` Avanzadas `r fontawesome::fa("arrow-right", fill = "black")` Config Editor `r fontawesome::fa("arrow-right", fill = "black")` automaticSnapshots = false
+
+---
+
+### Descarga e instalación de [Zotfile](http://zotfile.com/)
+
+Add-on que permite manipular los pdfs.
+
+Para esto es recomendable el uso de algún servicio de nube donde guardar los PDFs.
+Porque Zotero Cloud solo da 300 MB gratuitos.
+Yo me generé una cuenta en [MEGASync](https://mega.io/), que da 50 GB gratuitos y guardo ahi mis PDFs.
+
+Una vez que tenemos creada la carpeta donde guardaremos nuestros PFDs en la nube, instalamos y configuramos Zotfile:
+
+1. En Zotero Desktop voy a _Herramientas_ `r fontawesome::fa("arrow-right", fill = "black")` _Add-ons_
+2. Clickeo el icono de la tuerca y luego en _Install add-on from file_
+3. Selecciono el archivo .xpi descargado
+4. Se instala y debes reiniciar Zotero
+
+Una vez instalado, debemos setear la sincronización de los PDFs.
+1. _Herramientas_ `r fontawesome::fa("arrow-right", fill = "black")` _Zotfile preferences_
+2. En la solapa de _General settings_ setear _SourceFolder for Attaching New files_ a alguna carpeta donde suelas descargar PDFs COMO POR EJEMPLO _Descargas_.
+3. Setear _Location of files_ como _Custom Location_ y seleccionar la carpeta que creamos en el sincronizador de la nube.
+
+---
+class: center, middle
+Pueden encontrar más herramientas en el curso [__Mastering Zotero de YouTube__](https://www.youtube.com/watch?v=89sHZedSqPY&list=PLTB19TB2jaeUkmZFzv_HLEYMD1fj2TeHd)
+# Gracias por su atención!
+
+Slides created via the R packages:
+
+[**xaringan**](https://github.com/yihui/xaringan)<br>
+[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+
+The chakra comes from [**remark.js**](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [**R Markdown**](https://rmarkdown.rstudio.com).
